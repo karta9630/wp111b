@@ -1,5 +1,33 @@
-<html>
-    <head>
-        
-    </head>
-</html>
+@charset "UTF-8";
+body{
+    background-color:rgba(154, 149, 3, 0.141);
+}
+h1{
+    color:rgba(241, 3, 11, 0.594);
+    text-align: center;
+    font-size: 40px ;
+}
+p{color: rgb(74, 16, 16); 
+        padding-left: 10%;
+        font-family: 'Courier New', Courier, monospace;
+
+} 
+a{color: rgb(74, 16, 16); 
+    padding-left: 10%;
+}       
+img{
+    padding-left: 10%;
+    
+}
+h2{
+    color:blue;
+    text-align: center;
+}
+form{
+    color: rgb(195, 205, 8);
+    padding-left: 20%;
+    border:5px double    #d71010;
+    background-color: rgb(23, 23, 23);
+    font-family: 'Courier New', Courier, monospace;
+}
+
