@@ -13,5 +13,4 @@ function count(list) {
 }
 
 var list = ['a', 'dog', 'chase', 'a', 'cat']
-
 console.log(count(list))
