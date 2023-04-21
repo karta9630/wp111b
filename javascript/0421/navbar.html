@@ -1,0 +1,58 @@
+<html>
+
+<body>
+
+    <head>
+        <style>
+            body {
+                margin: 0px;
+            }
+
+            #nav {
+                background-color: black;
+                width: 40;
+                height: 100%;
+            }
+
+            #nav a {
+                color: white;
+                padding-top: 10px;
+                font-size: 20px;
+                text-decoration: none;
+                padding-left: 40px;
+                margin: 10px;
+            }
+
+            #nava {
+                padding-top: 10px;
+
+            }
+
+            #nav a:hover {
+                color: aqua;
+            }
+        </style>
+    </head>
+    <div id="nav" onmouseover="big()" onmouseout="small()">
+        <div id="nava" onmouseover="chnage()" onmouseout="back()">
+            <p><a href="123">about_me</a></p>
+            <p><a href="123">example_1</a></p>
+            <p><a href="123">example_2</a></p>
+            <p><a href="123">example_3</a></p>
+        </div>
+    </div>
+    <script>
+        function big() {
+            let nav = document.getElementById('nav')
+            nav.style.width = '150px';
+        }
+        function small() {
+            let nav = document.getElementById('nav')
+            nav.style.width = '40px';
+        }
+
+
+    </script>
+</body>
+
+</html>
