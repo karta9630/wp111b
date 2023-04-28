@@ -33,7 +33,7 @@ function myFunction() {
     <input type="text" placeholder="帳號"/><br/>
     <input type="text" placeholder="密碼"/><br/>
     <input type="text" placeholder="電號號碼"/><br/>
-    <a href="#login">送出</a>
+    <a href="#login">確定送出</a>
     `,
   }
   
