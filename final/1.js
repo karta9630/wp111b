@@ -16,13 +16,24 @@ let main = document.querySelector('#main')
 
 let pages={
     '#0317':`
-    <h1>登入</h1>
-    <input type="text" placeholder="帳號"/><br/>
-    <input type="text" placeholder="密碼"/><br/>
-    <a>0 </a>    
+    <h1>3月17號</h1>
+    <a href="#0317/1">work1</a>
+    <a href="#0317/2">work2</a>
+    <a href="#0317/3">work3</a>
+    `,
+    '#0317/1':`
+    <h1>3月17號</h1>
+    
+    function fibonacci(n) {
+      if(n<=1)
+          return n;
+      return (fibonacci(n-2)+fibonacci(n-1));
+  }
     `,
   }
   window.onhashchange = function () {
     let hash = window.location.hash
     main.innerHTML = pages[hash]
     }
+
+    
