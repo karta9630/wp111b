@@ -64,10 +64,26 @@ body {
   display: block;
   text-align: center;
   margin-top: 20px;
-  font-size: 30;
+  font-size: 40px;
   margin-left: 30px;
   margin-right: 30px;
 }
 .bigmargin {
   margin: 20px;
+  text-align: center;
+}
+.bigmargin a{
+  margin-right: 10px;
+}
+.bigmargin h1{
+  font-size: 60px;
+}
+.bigmargin h2{
+  font-size: 40px;
+  color: red;
+}
+.bigmargin p{
+  font-size: 30px;
+  color: black;
+  text-align: left;
 }

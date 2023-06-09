@@ -14,15 +14,27 @@ window.onclick = function (e) {
 }
 let main = document.querySelector('#main')
 
-let pages={
-    '#0317':`
+let pages = {
+  '#0303':`
+<h1>3月3日-3月10日</h1>  
+  <a href="#0303/1">註冊表單程式碼</a>
+  <a href="#0303/2">about me程式碼</a>
+  <a href="#0303/3">css程式碼</a>
+  <a href="#0303/4">註冊表單</a>
+  <a href="#0303/5> about me</a>
+  `,
+  '#0303/1':`
+
+  `,
+
+  '#0317': `
     <h1>3月17號</h1>
     <a href="#0317/1">work1</a>
     <a href="#0317/2">work2</a>
-    <a href="#0317/3">work3</a>
     `,
-    '#0317/1':`
+  '#0317/1': `
     <h1>3月17號</h1>
+    <h2>fibonacci</h2>
     
     function fibonacci(n) {
       if(n<=1)
@@ -30,10 +42,27 @@ let pages={
       return (fibonacci(n-2)+fibonacci(n-1));
   }
     `,
+  '#0317/2': `
+    <h1>3月17號</h1>
+    <h2>isprime</h2>
+    <p>  " 
+    function isprime(n) {
+      if (n<=1) 
+          return false;
+    for(let i=2;i<(n);i++){
+      if(n%i==0)
+          return false;
   }
-  window.onhashchange = function () {
-    let hash = window.location.hash
-    main.innerHTML = pages[hash]
-    }
+  return true;
+}
+</p>
 
-    
+    `
+}
+window.onhashchange = function () {
+  let hash = window.location.hash
+  main.innerHTML = pages[hash]
+}
+
+
+let htmlInput = "<p>This is a paragraph.</p><div><h1>Title</h1><p>Content</p></div>";

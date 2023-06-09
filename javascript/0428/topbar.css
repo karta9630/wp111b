@@ -65,4 +65,9 @@ body {
   
   .bigmargin {
     margin: 20px;
+    text-align: center;
+  }
+  .bigmargin a{
+    font-size: 80px;
+    display: inline-block;
   }
