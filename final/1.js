@@ -41,7 +41,7 @@ let pages = {
   <a href="#0303/5">about me</a>
   `,
   '#0303/3': `
-  <h2>
+
   @charset "UTF-8";
   body{
       background-color:rgba(154, 149, 3, 0.141);
@@ -75,7 +75,7 @@ let pages = {
       font-family: 'Courier New', Courier, monospace;
   }
   
-  </h2>
+  
   `,
   '#0303/4': `
 <html>
@@ -599,7 +599,7 @@ body {
 
 `,
 '#0505/1':`
-<a href="https://github.com/wrr606/wp111b/blob/main/homework/10/chatGPT.js" target="_block">Github</a>
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0505/chatgpt.js" target="_block">Github</a>
 /* 
         來源 范揚玄的程式碼 借鑒學習觀摩 讓我理解
 
@@ -623,8 +623,48 @@ const jsonData = await jsonResponse.json()
 console.log(jsonData["choices"][0]["message"]["content"])
 
 `,
+'#0505/2':`
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0505/CMD.js"
+
+/* 
+        來源 范揚玄的程式碼 借鑒學習觀摩 讓我理解
+
+*/
+while (true) {
+    let cmd = prompt("shell>")
+    if (cmd == 'exit') break
+    console.log(eval(cmd))
+}
 
 
+
+`,
+'#0512':`
+<h1>5月12日</h1>
+<a href="#0512/1">網頁</a>
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0512/1.html" target="_block">程式碼 </a>
+
+
+
+`,
+'#0512/1':`
+<!DOCTYPE html>
+<html>
+<body>
+
+</svg>
+<svg  height="230" width="500">
+  <circle cx="75" cy="85" r="75" stroke="green" fill="transparent" ></circle>
+  <circle cx="35" cy="75" r="20" stroke="red" fill="transparent" ></circle>
+  <circle cx="40" cy="85" r="7.5" stroke="black" fill="transparent" ></circle>
+  <circle cx="105" cy="75" r="20" stroke="red" fill="transparent" ></circle>
+  <circle cx="100" cy="85" r="7.5" stroke="black" fill="transparent" ></circle>
+  <path  d="M 40 100 q 60 40 70 0" stroke="blue" stroke-width="1" fill="none" />
+
+</svg>
+</body>
+</html>
+`,
 
 
 
