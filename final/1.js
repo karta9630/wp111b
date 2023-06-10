@@ -17,7 +17,7 @@ let main = document.querySelector('#main')
 let pages = {
 
 
-'#home':`
+  '#home': `
 
 
 <h1>這是我的作業平台</h1>
@@ -77,7 +77,7 @@ let pages = {
   
   </h2>
   `,
-'#0303/4':`
+  '#0303/4': `
 <html>
 <body>
 <h2 style="font-size: 60px;">註冊 </h2>
@@ -113,7 +113,7 @@ let pages = {
 </html>
 
 `,
-'#0303/5':`
+  '#0303/5': `
 <html>
 <head>
 <body>
@@ -193,13 +193,6 @@ let pages = {
   }
     `,
 
-
-
-
-
-
-
-
   '#0317/2': `
     <h2>isprime</h2>
     <a href="https://github.com/karta9630/wp111b/blob/main/javascript/0317/isPrime.js"target="_blank">Github連結</a>
@@ -216,7 +209,15 @@ let pages = {
 </p>
 
     `,
-'#0324':`
+
+
+
+
+
+
+
+
+  '#0324': `
 <h1> 3月24日</h1>
 <a href="#0324/1">madd.js</a>
 <a href="#0324/2">mmul.js</a>
@@ -225,7 +226,7 @@ let pages = {
 <a href="#0324/5">vodt.js</a>
 
 `,
-'#0324/1':`
+  '#0324/1': `
 <h2>madd</h2>
 <a href="https://github.com/karta9630/wp111b/blob/main/javascript/0324/madd.js" target="_blank">Github連結 </a>
 var a=[1,4,8,9] ,b=[7,6,3,9];
@@ -233,7 +234,7 @@ var all=a.concat(b)
  console.log(all);
 
 `,
-'#0324/2':`
+  '#0324/2': `
 <h2>mmul</h2>
 <a href="https://github.com/karta9630/wp111b/blob/main/javascript/0324/mmul.js" target="_blank">Github連結 </a>
 function mmul(a, b) {
@@ -255,7 +256,7 @@ console.log(mmul(a, b));
 
 `,
 
-'#0324/3':`
+  '#0324/3': `
 <h2>repeat</h2>
 <a href="https://github.com/karta9630/wp111b/blob/main/javascript/0324/repeat.js" target="_blank">Github連結 </a>
 function repeat(f,n){
@@ -274,9 +275,7 @@ console.log(repeat(f,n));
 
 
 
-
-
-'#0324/4':`
+  '#0324/4': `
 <h2>vadd</h2>
 <a href="https://github.com/karta9630/wp111b/blob/main/javascript/0324/vadd.js" target="_blank">Github連結 </a>
 function vadd(a, b) {
@@ -291,11 +290,8 @@ console.log(vadd(a, b));
 
 
 
-
-
-
 `,
-'#0324/5':`
+  '#0324/5': `
 <h2>vodt</h2>
 <a href="https://github.com/karta9630/wp111b/blob/main/javascript/0324/vodt.js" target="_blank">Github連結 </a>
 function vdot(a, b) {
@@ -313,18 +309,320 @@ console.log(vdot(a, b));
 `,
 
 
-'#0414':`
+
+
+
+
+  '#0414': `
 <h1>4月14日</h1>
 <a href="#0414/1">month.js</a>
 <a href="#0414/2">算單字出現次數</a>
-<a
+<a href="#0414/3">矩陣相加相乘物件畫</a>
+`,
+
+  '#0414/1': `
+<h1>month.js</h1>
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0414/month.js" target="_blank">Github連結</a>
+var month ={
+  january:'1',february:'2',march:'3',april:'4',may:'5',june:'6',july:'7',august:'8',september:'9',october:'10',november:'11',december:'12'
+
+}
+
+function m(c){
+  return month[c];
+}
+console.log(m("january"))
+console.log(m("february"))
+console.log(m("march"))
+
+`,
+  '#0414/2': `
+<h1>算單字出現次數</h1>
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0414/2.js" target="_blank">Github連結</a>
+
+function count(list) {
+  var x = {}
+  for (var i of list) {
+      if (i in x) {
+          x[i]++
+      }
+      else {
+          x[i] = 1
+      }
+  }
+  return x
+}
+
+var list = ['a', 'dog', 'chase', 'a', 'cat']
+console.log(count(list))
+
+
+`,
+  '#0414/3': `
+<a href="#0414/3">矩陣相加相乘物件畫</a>
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0414/3.js" target="_blank">Github連結</a>
+
+class Matrix{
+  constructor(a) {
+      this.a = a;
+  }
+
+  add(b) {
+      for(let i=0;i<(b).length;i++){
+          let x="";
+          for(let j=0;j<(b[i].length);j++){
+              x+=(b[i][j]+this.a[i][j]);
+              x+=" ";
+          }
+          console.log(x);
+      }
+  }
+
+  mul(x) {
+      var b=0,a="";
+      for(var i=0;i<(x).length;i++){
+          a="";
+          for(var j=0;j<(x).length;j++){
+              b=0;
+              for(var k=0;k<(x).length;k++){
+                  b+=x[i][k]*this.a[k][j];
+              }
+              a+=b;
+              a+=" ";
+          }
+          console.log(a);
+      }
+  }
+}
+
+let a=[[1,2,3],[4,5,6],[7,8,9]],b=[[9,8,7],[6,5,4],[3,2,1]];;
+let x=new Matrix(a);
+x.add(b);
+console.log()
+x.mul(b);
+`,
 
 
 
+
+
+
+
+
+
+
+
+  '#0421': `
+<h1>4月21日</h1>
+<a href="#0421/1">navbar.html</a>
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0428/1.html" target="_blank" >navbar程式碼</a>
+<a href="#0421/2">navbar.js</a>
+`,
+  '#0421/1': `
+  <a href="https://karta9630.github.io/wp111b/javascript/0428/1.html#aboutus" target"_blank"> 有包含JS的網站(這個頁面我用不出JS)</a>
+<html>
+<head>
+<style>
+body {
+    margin:0px;
+}
+#nav {
+    background-color:#000000;
+    width:40px;
+    height:100%;
+    transition: width 1s;
+    display:inline-block;
+    float:left;
+}
+#nav:hover {
+    width:200px;
+}
+#navMain {
+    padding-left:40px;
+    padding-top:40px;
+}
+#nav a {
+    color:#ffffff;
+    white-space: nowrap;
+    text-decoration: none;
+}
+#nav a:hover {
+    color:orange;
+}
+
+#main {
+    padding: 10px 50px;
+}
+</style>
+</head>
+<body>
+<div id="nav">
+  <div id="navMain">
+    <p><a href="#aboutus">關於本站</a></p>
+    <p><a href="#example1">範例1</a></p>
+    <p><a href="#example2">範例2</a></p>
+    <p><a href="#example3">範例3</a></p>
+  </div>
+</div>
+<div style="padding:10px;">
+    <div id="main">
+        xxxx
+    </div>
+</div>
+<script src="2.js"></script>
+</body>
+</html>
 
 
 `,
 
+  '#0421/2': `
+(｡í_ì｡)我用不出JS的程式碼有BUG
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0428/2.js" target"_block" >所以只能點這裡了</a>
+  
+`,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  '#0428': `
+<h1>4月28日</h1>
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0428/1.html" target="_block">程式碼</a>
+<a href="https://karta9630.github.io/wp111b/javascript/0428/index.html" target="_block">html</a>
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0428/topbar.js" target="_bolck">js</a>
+<a href="#0428/3">css</a>
+
+`,
+
+
+'#0428/3':`
+<a href=" https://github.com/karta9630/wp111b/blob/main/javascript/0428/topbar.css" target="_block">Github</a>
+body {
+  margin:0px;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.bigmargin {
+  margin: 20px;
+  text-align: center;
+}
+.bigmargin a{
+  font-size: 80px;
+  display: inline-block;
+}
+
+
+`,
+
+
+
+
+
+
+
+'#0505':`
+<h1>5月5日<h1>
+<a href="#0505/1">chatgpt.js</a>
+<a href="#0505/2">CMD.js</a>
+
+
+`,
+'#0505/1':`
+<a href="https://github.com/wrr606/wp111b/blob/main/homework/10/chatGPT.js" target="_block">Github</a>
+/* 
+        來源 范揚玄的程式碼 借鑒學習觀摩 讓我理解
+
+*/
+
+let txt=prompt("請輸入文字：")
+const jsonResponse = await fetch("https://api.openai.com/v1/chat/completions", 
+{
+    body: JSON.stringify({
+        "model": "gpt-3.5-turbo",
+        "messages": [{"role": "user", "content": txt}],
+        "temperature": 0.7
+    }),
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': Bearer '$'{Deno.env.get('OPENAI_API_KEY')},
+    }
+})
+const jsonData = await jsonResponse.json()
+console.log(jsonData["choices"][0]["message"]["content"])
+
+`,
 
 
 
@@ -342,3 +640,9 @@ window.onhashchange = function () {
 
 
 let htmlInput = "<p>This is a paragraph.</p><div><h1>Title</h1><p>Content</p></div>";
+
+
+
+
+
+

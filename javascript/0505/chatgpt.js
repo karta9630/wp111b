@@ -1,7 +1,7 @@
-/* 
+` 
         來源 范揚玄的程式碼 借鑒學習觀摩 讓我理解
 
-*/
+`
 
 let txt=prompt("請輸入文字：")
 const jsonResponse = await fetch("https://api.openai.com/v1/chat/completions", 
