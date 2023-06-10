@@ -71,9 +71,12 @@ body {
 .bigmargin {
   margin: 20px;
   text-align: center;
+  white-space: pre-wrap;
+
 }
 .bigmargin a{
   margin-right: 10px;
+
 }
 .bigmargin h1{
   font-size: 60px;
@@ -85,5 +88,5 @@ body {
 .bigmargin p{
   font-size: 30px;
   color: black;
-  text-align: left;
+  text-align: center;
 }

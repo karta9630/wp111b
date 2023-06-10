@@ -15,6 +15,23 @@ window.onclick = function (e) {
 let main = document.querySelector('#main')
 
 let pages = {
+
+
+'#home':`
+
+
+<h1>這是我的作業平台</h1>
+<h2></h2>
+<p>我的作業都在這邊，可能有缺吧?
+
+
+
+`,
+
+
+
+
+
   '#0303': `
 <h1>3月3日-3月10日</h1>  
   <a href="https://github.com/karta9630/wp111b/blob/main/homework/2023-03-03.html" target="_blank">註冊表單程式碼</a>
@@ -168,7 +185,7 @@ let pages = {
     `,
   '#0317/1': `
     <h2>fibonacci</h2>
-    
+    <a href="https://github.com/karta9630/wp111b/blob/main/javascript/0317/fibonacc.js "target="_blank">Github連結</a>
     function fibonacci(n) {
       if(n<=1)
           return n;
@@ -185,7 +202,8 @@ let pages = {
 
   '#0317/2': `
     <h2>isprime</h2>
-    <p>  " 
+    <a href="https://github.com/karta9630/wp111b/blob/main/javascript/0317/isPrime.js"target="_blank">Github連結</a>
+    <p>  
     function isprime(n) {
       if (n<=1) 
           return false;
@@ -209,7 +227,7 @@ let pages = {
 `,
 '#0324/1':`
 <h2>madd</h2>
-
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0324/madd.js" target="_blank">Github連結 </a>
 var a=[1,4,8,9] ,b=[7,6,3,9];
 var all=a.concat(b)
  console.log(all);
@@ -217,6 +235,7 @@ var all=a.concat(b)
 `,
 '#0324/2':`
 <h2>mmul</h2>
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0324/mmul.js" target="_blank">Github連結 </a>
 function mmul(a, b) {
   let r = []
   for (let i = 0; i < a.length; i++) {
@@ -237,15 +256,38 @@ console.log(mmul(a, b));
 `,
 
 '#0324/3':`
-
-
-
-
-
+<h2>repeat</h2>
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0324/repeat.js" target="_blank">Github連結 </a>
+function repeat(f,n){
+  let x=[]
+  for(let i=0;i<n;i++){
+      x[i]=Math.random();
+      f=x[i]
+  }
+  return x;
+}
+var f    ,n=10;
+console.log(repeat(f,n));
 
 `,
 
+
+
+
+
+
 '#0324/4':`
+<h2>vadd</h2>
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0324/vadd.js" target="_blank">Github連結 </a>
+function vadd(a, b) {
+  let r = []
+  for (let i = 0; i < a.length; i++) {
+      r[i] = a[i] + b[i];
+  }
+  return r
+}
+var a = [2, 4, 6, 7], b = [8, 6, 4, 3];
+console.log(vadd(a, b));
 
 
 
@@ -254,13 +296,40 @@ console.log(mmul(a, b));
 
 `,
 '#0324/5':`
+<h2>vodt</h2>
+<a href="https://github.com/karta9630/wp111b/blob/main/javascript/0324/vodt.js" target="_blank">Github連結 </a>
+function vdot(a, b) {
+  let r = [], n = 0
+  for (let i = 0; i < a.length; i++) {
+      r[i] = (a[i] * b[i]);
+      n = n + r[i];
+  }
 
+  return n
+}
+var a = [2, 4, 6, 7], b = [8, 6, 4, 3];
+console.log(vdot(a, b));
+
+`,
+
+
+'#0414':`
+<h1>4月14日</h1>
+<a href="#0414/1">month.js</a>
+<a href="#0414/2">算單字出現次數</a>
+<a
 
 
 
 
 
 `,
+
+
+
+
+
+
 
 
 
